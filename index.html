@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="headerContainer">
+          
+        <h1 class='title' span style="color:white"> BOOK LIBRARY</span></h1> 
+        </div>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <h2>Books Read</h2>
+            <h3 id='booksRead'>0</h3>
+            <h2>Books Unread</h2>
+            <h3 id='booksUnread'>0</h3>
+            <h2>Total Books</h2>
+            <h3 id='booksTotal'>0</h3>
+            <div class="addButtonContainer"><button class='button' onclick="openForm()">Add Book</button></div>
+        </div>
+        <div id='overlay' >
+            <form class='addBookForm' id='addBookForm'>
+                <h4>Add New Nook</h4>
+                <input type="text" id="bookName" name="bookName" placeholder="Book Name"/>
+                <input type="text" id="author" name="author" placeholder="Author"/>
+                <input type="number" id="pages" name="pages" placeholder="Page Count"/>
+                <span class='toggleButtonContainer'>
+                    <label class="read">Read?</label>
+                    <label class="switch">
+                        <input id="readOrNot" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </span>
+                <div class="submitButtonContainer"><button id='submit' type="submit" class='submitButton'>Submit</button></div>
+                <div class="cancelButtonContainer"><button class='cancelButton' onclick="closeBookForm()">Cancel</button></div>
+            </form>
+        </div>
+        <div id='bookSection' class='bookSection'></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
